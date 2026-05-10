@@ -59,8 +59,15 @@ Answer (Debbie Lapeyre):
             * Plugin and theme custom developments
                 * To streamline the workflow
                 * To display 2 page falvours (web or print)
+             * Print pages are exported to PDF using Samsung's web browser and manually assembled to create books.  
         * Pros:
             * Web and print
             * Fits both online and offline friends and relatives
         * Cons:
+            * Workload
+         * Extras:
+            * Video
+    * Future directions
+       * Group  
             * (Slightly) more work
+
