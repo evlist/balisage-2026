@@ -33,13 +33,23 @@ One impress.js slide = one `<div class="step">` block in `index.html`.
 Minimal slide example:
 
 ```html
-<div class="step slide" data-x="1200" data-y="0">
+<div class="step slide" data-delta-x="1200">
     <h2>My title</h2>
     <p>My content...</p>
 </div>
 ```
 
-For simple left-to-right navigation, increase `data-x` by about `1200` for each new slide.
+For simple left-to-right navigation, set `data-delta-x="1200"` once. The build/dev server keeps adding that delta to the previous slide position until another `data-delta-x`, `data-delta-y` or `data-delta-z` value is defined.
+
+You can still use absolute impress.js coordinates when needed:
+
+```html
+<div class="step slide" data-x="0" data-y="1200" data-scale="1">
+    <h2>A manual position</h2>
+</div>
+```
+
+The coordinate resolver runs automatically during `npm run dev` and `npm run build`; it does not rewrite `index.html`.
 
 ## Useful commands
 
