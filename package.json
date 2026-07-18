@@ -1,0 +1,27 @@
+{
+  "name": "balisage-2026",
+  "version": "1.0.0",
+  "description": "My presentation for Balisage 2026 (Open Mic session, 10 minutes slot)",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 4173",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evlist/balisage-2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evlist/balisage-2026/issues"
+  },
+  "homepage": "https://github.com/evlist/balisage-2026#readme",
+  "dependencies": {
+    "impress.js": "^1.1.0"
+  },
+  "devDependencies": {
+    "vite": "^8.1.5"
+  }
+}

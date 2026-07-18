@@ -1,6 +1,63 @@
 # balisage-2026
 My presentation for Balisage 2026 (Open Mic session, 10 minutes slot)
 
+## Setup for writing slides (phase 1)
+
+Dependencies are managed with npm and the presentation uses:
+
+- impress.js for slide navigation and transitions
+- Vite for local preview in Codespaces
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start preview server:
+
+```bash
+npm run dev
+```
+
+In Codespaces:
+
+- Open the Ports view
+- Find port 4173
+- Open it in browser (or in-editor preview)
+
+## Editing model
+
+One impress.js slide = one `<div class="step">` block in `index.html`.
+
+Minimal slide example:
+
+```html
+<div class="step slide" data-x="1200" data-y="0">
+    <h2>My title</h2>
+    <p>My content...</p>
+</div>
+```
+
+For simple left-to-right navigation, increase `data-x` by about `1200` for each new slide.
+
+## Useful commands
+
+```bash
+npm run dev      # live editing preview
+npm run build    # production build in dist/
+npm run preview  # preview production build
+```
+
+## Publish on GitHub (when you are ready)
+
+Two easy options:
+
+1. GitHub Pages from branch `main` (root or `/docs`)
+2. GitHub Pages from GitHub Actions using `npm run build`
+
+If you want, I can set up option 2 next so each push to `main` publishes automatically.
+
 ## Context
 Proposal:
 
