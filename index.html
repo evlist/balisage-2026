@@ -15,11 +15,10 @@
       <div id="intro" class="step slide" data-x="0" data-y="0">
         <h1>Balisage 2026</h1>
         <p>Open Mic session - draft de presentation</p>
-        <p>1 div .step = 1 slide</p>
       </div>
 
       <div id="why" class="step slide" data-delta-x="1200">
-        <h2>Why</h2>
+        <h2>Main goals</h2>
         <ul>
           <li>Keeping in touch with friends and relatives during our long distance hikes.</li>
           <li>Target audience includes my 88 year old mother who does not have Internet access.</li>
@@ -35,14 +34,7 @@
                     <th>Print</th>
                     <th>Web</th>
                     <th>Video</th>
-            <thead>
-                <tr>
-                    <th>Audience</th>
-                    <th>Print</th>
-                    <th>Web</th>
-                    <th>Video</th>
-                </tr>
-            </thead>
+            
             </thead>
 
             <tbody>
@@ -87,18 +79,87 @@
           <li>Hike from Montpellier to Nazare on Santiago paths (6 months, 3200 km).</li>
           <li>Web and print workflow with custom plugin/theme work.</li>
           <li>Print pages exported to PDF and assembled manually into books.</li>
+          <li>Pros: combination of web and print reaches our targeted audience.</li>
+          <li>Cons: higher complexity and workload.</li>
+          <li>Notes: video have been added in the meantime.</li>
         </ul>
       </div>
 
-      <div id="future" class="step slide">
-        <h2>Future directions</h2>
+      <div id="how" class="step slide">
+        <h2>How does it work</h2>
         <ul>
-          <li>Group workflow.</li>
-          <li>(Slightly) more work.</li>
+          <li>Web workflow: Wordpress blog with custom plugin and theme.</li>
+          <li>Print workflow: PDF pages printed from Wordpress and assembled into books.</li>
+          <li>Video workflow: MP4 videos exported from Wordpress and uploaded to YouTube.</li>
+          <li>No automation between video and text.</li>
         </ul>
       </div>
 
-      <div id="overview" class="step" data-x="3000" data-y="800" data-scale="3"></div>
+      <div id="but" class="step slide">
+        <h2>But...</h2>
+        <ul>
+          <li>Web and print are different</li>
+          <li>The same content needs different presentations</li>
+        </ul>
+      </div>
+
+      <div id="CSS" class="step slide">
+        <h2>CSS print is not enough</h2>
+        <ul>
+          <li>CSS can't change the structure of the content.</li>
+          <li>That's why XSLT has been invented</li>
+          <li>Wordpress doesn't use XSLT</li>
+        </ul>
+      </div>
+
+      <div id="Wordpress-block-templates" class="step slide">
+        <h2>Wordpress block templates</h2>
+        <ul>
+          <li>In 2028, Wordpress introduced block (and page) templates</li>
+          <li>Block templates are a way to change the structure of the content.</li>
+          <li>They are written in PHP and HTML.</li>
+          <li>They can be used to create different presentations of the same content.</li>
+        </ul>
+      </div>
+      
+      <div id="page-template-selector" class="step slide">
+        <h2>Need to attach different page templates for web and print</h2>
+        <ul>
+          <li>Done adding a "?print" query string</li>
+          <li>A PHP hack selects a page template with a "-print" suffix when "?print" is detected</li>
+          <li>Completely different presentations can be used for web and print</li>
+        </ul>
+      </div>
+      
+      <div id="future" class="step slide">
+        <h2>Current and future directions</h2>
+        <ul>
+          <li>Package these hacks into proper plugins.</li>
+          <li>AI</li>
+        </ul>
+      </div>
+
+      <div id="AI" class="step slide">
+        <h2>AI</h2>
+        <ul>
+          <li>This year I have started using AI (claude) </li>
+          <li>Inputs: video subtitles, GPX tracks and proper prompts</li>
+          <li>Outputs: technical hiking guides, narrative and an additional educational section</li>
+          <li>HTML formatted, the output can be directly pasted into Wordpress.</li>
+        </ul>
+      </div>
+
+        <div id=""game-changer" class="step slide">
+          <h2>Game changer</h2>
+          <ul>
+            <li>AI can generate content from video subtitles and GPX tracks.</li>
+            <li>It could also generate content for different presentations (web, print, video).</li>
+            <li>It could also generate content for different audiences (friends, relatives, mother).</li>
+            <li>Are our old design patterns obsolete?</li>
+          </ul>
+        </div>
+      
+        <div id="overview" class="step" data-x="3000" data-y="800" data-scale="3"></div>
     </div>
 
     <div class="fallback-message">
