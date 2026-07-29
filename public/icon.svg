@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Balisage 2026">
+  <rect width="512" height="512" rx="96" fill="#f5f2e8"/>
+  <rect x="72" y="104" width="368" height="256" rx="28" fill="#fffef8" stroke="#1f6f5e" stroke-width="20"/>
+  <path d="M130 174h252M130 232h188M130 290h228" fill="none" stroke="#1e2b28" stroke-width="24" stroke-linecap="round"/>
+  <path d="M174 408h164" fill="none" stroke="#1f6f5e" stroke-width="24" stroke-linecap="round"/>
+</svg>
