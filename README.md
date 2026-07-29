@@ -59,14 +59,30 @@ npm run build    # production build in dist/
 npm run preview  # preview production build
 ```
 
-## Publish on GitHub (when you are ready)
+## Publish on GitHub Pages
 
-Two easy options:
+This repository publishes the built presentation automatically with GitHub Actions.
 
-1. GitHub Pages from branch `main` (root or `/docs`)
-2. GitHub Pages from GitHub Actions using `npm run build`
+On every push to `main`, the workflow in `.github/workflows/pages.yml` runs:
 
-If you want, I can set up option 2 next so each push to `main` publishes automatically.
+```bash
+npm ci
+npm run build
+```
+
+It then deploys the generated `dist/` directory to GitHub Pages.
+
+Repository settings required once:
+
+- Go to GitHub repository Settings
+- Open Pages
+- Set Source to GitHub Actions
+
+The published URL should be:
+
+```text
+https://evlist.github.io/balisage-2026/
+```
 
 ## Context
 Proposal:
