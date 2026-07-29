@@ -33,6 +33,20 @@ body {
     0 20px 50px rgba(30, 43, 40, 0.08),
     0 4px 12px rgba(30, 43, 40, 0.08);
   line-height: 1.45;
+  opacity: 0.28;
+  filter: saturate(0.35);
+  transition:
+    opacity 500ms ease,
+    filter 500ms ease,
+    box-shadow 500ms ease;
+}
+
+.slide.active {
+  opacity: 1;
+  filter: none;
+  box-shadow:
+    0 28px 65px rgba(30, 43, 40, 0.14),
+    0 6px 16px rgba(30, 43, 40, 0.1);
 }
 
 .slide h1,
