@@ -27,10 +27,10 @@ body {
 .slide {
   position: relative;
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: minmax(0, 1fr) auto;
   gap: 1.4rem;
   width: 900px;
-  min-height: 560px;
+  height: 560px;
   padding: 3rem 5.5rem 3.2rem;
   overflow: hidden;
   border-radius: 6px;
@@ -84,6 +84,7 @@ body {
 
 .visual {
   min-height: 0;
+  overflow: hidden;
   display: grid;
   place-items: center;
 }
@@ -110,6 +111,7 @@ body {
 
 .visual.cover img,
 .slide > img.cover {
+  height: 100%;
   object-fit: cover;
 }
 
