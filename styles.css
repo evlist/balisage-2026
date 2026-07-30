@@ -222,6 +222,14 @@ body {
   background: rgba(232, 195, 106, 0.18);
 }
 
+.action-menu__message {
+  margin: 0.65rem 0 0;
+  color: rgba(245, 238, 216, 0.72);
+  font-size: 0.95rem;
+  line-height: 1.25;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .slide {
     padding: 2.5rem 3rem;

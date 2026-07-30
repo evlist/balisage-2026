@@ -8,6 +8,7 @@ let startY = 0;
 let impressApi;
 let longPressTimer;
 let actionMenu;
+let actionMessageTimer;
 let longPressOpenedMenu = false;
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -83,6 +84,8 @@ function createActionMenu() {
       <button type="button" data-action="first">First slide</button>
       <button type="button" data-action="overview">Overview</button>
       <button type="button" data-action="refresh">Refresh app</button>
+      <button type="button" data-action="close">Close</button>
+      <p class="action-menu__message" aria-live="polite"></p>
     </div>
   `;
 
@@ -127,7 +130,37 @@ function runAction(action) {
     impressApi.goto("overview");
   } else if (action === "refresh") {
     refreshApp();
+  } else if (action === "close") {
+    closeApp();
   }
+}
+
+function closeApp() {
+  window.close();
+
+  window.setTimeout(() => {
+    if (document.visibilityState === "visible" && window.history.length > 1) {
+      window.history.back();
+      return;
+    }
+
+    showActionMessage("Close the app from Android's recent apps screen.");
+  }, 250);
+}
+
+function showActionMessage(message) {
+  if (!actionMenu) {
+    return;
+  }
+
+  actionMenu.hidden = false;
+  const messageElement = actionMenu.querySelector(".action-menu__message");
+  messageElement.textContent = message;
+
+  window.clearTimeout(actionMessageTimer);
+  actionMessageTimer = window.setTimeout(() => {
+    messageElement.textContent = "";
+  }, 4000);
 }
 
 async function refreshApp() {
