@@ -137,6 +137,32 @@ a:focus-visible {
   object-fit: cover;
 }
 
+.scattered-icons {
+  position: relative;
+  overflow: visible;
+}
+
+.scattered-icons img {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: calc(4.5rem * var(--s));
+  height: calc(4.5rem * var(--s));
+  object-fit: contain;
+  opacity: 0.86;
+  transform: translate(-50%, -50%) rotate(var(--r));
+  filter: drop-shadow(0 0.45rem 0.65rem rgba(0, 0, 0, 0.42));
+}
+
+.scattered-icons img.on-light {
+  padding: 0.55rem;
+  border-radius: 18%;
+  background: rgba(245, 238, 216, 0.88);
+  box-shadow:
+    0 0.45rem 0.9rem rgba(0, 0, 0, 0.38),
+    inset 0 0 0 1px rgba(23, 22, 18, 0.12);
+}
+
 .slide h1,
 .slide h2 {
   align-self: end;
