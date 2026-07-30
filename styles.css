@@ -160,6 +160,54 @@ body {
   display: block;
 }
 
+.action-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(8px);
+}
+
+.action-menu[hidden] {
+  display: none;
+}
+
+.action-menu__panel {
+  width: min(22rem, 88vw);
+  padding: 0.75rem;
+  border: 1px solid rgba(245, 238, 216, 0.18);
+  border-radius: 10px;
+  background: rgba(23, 22, 18, 0.94);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+}
+
+.action-menu button {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 1.1rem;
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+}
+
+.action-menu button + button {
+  margin-top: 0.25rem;
+}
+
+.action-menu button:focus,
+.action-menu button:hover {
+  outline: none;
+  background: rgba(232, 195, 106, 0.18);
+}
+
 @media (max-width: 768px) {
   .slide {
     padding: 2.5rem 3rem;
