@@ -3,6 +3,7 @@
   --paper: #171612;
   --ink: #f5eed8;
   --accent: #e8c36a;
+  --link: #75a8ff;
   --film-edge: rgba(245, 238, 216, 0.78);
   --film-edge-faded: rgba(245, 238, 216, 0.16);
 }
@@ -22,6 +23,27 @@ body {
     linear-gradient(90deg, rgba(255, 255, 255, 0.03), transparent 18%, transparent 82%, rgba(255, 255, 255, 0.03)),
     var(--bg);
   color: var(--ink);
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+a:visited {
+  color: var(--link);
+}
+
+a:focus-visible,
+a:hover {
+  color: #9fc2ff;
+}
+
+a:focus-visible {
+  outline: 0.08em solid currentColor;
+  outline-offset: 0.12em;
 }
 
 .slide {
