@@ -28,24 +28,55 @@ In Codespaces:
 
 ## Editing model
 
-One impress.js slide = one `<div class="step">` block in `index.html`.
+One impress.js slide = one `<div class="step slide">` block in `index.html`.
 
 Minimal slide example:
 
 ```html
-<div class="step slide" data-delta-x="1200">
-    <h2>My title</h2>
-    <p>My content...</p>
+<div class="step slide" data-delta-y="600">
+    <p>My sentence...</p>
 </div>
 ```
 
-For simple left-to-right navigation, set `data-delta-x="1200"` once. The build/dev server keeps adding that delta to the previous slide position until another `data-delta-x`, `data-delta-y` or `data-delta-z` value is defined.
+For simple top-to-bottom navigation, set `data-delta-y="600"` once. The build/dev server keeps adding that delta to the previous slide position until another `data-delta-x`, `data-delta-y` or `data-delta-z` value is defined.
+
+Slides can include an optional visual block before the subtitle sentence:
+
+```html
+<div class="step slide">
+    <div class="visual">
+        <img src="./public/images/photo.jpg" alt="Description" />
+    </div>
+    <p>The subtitle sentence stays at the bottom.</p>
+</div>
+```
+
+Use `two-up` for two images side by side:
+
+```html
+<div class="step slide">
+    <div class="visual two-up">
+        <img src="./public/images/photo-left.jpg" alt="Left photo" />
+        <img src="./public/images/photo-right.jpg" alt="Right photo" />
+    </div>
+    <p>Two images can share the same subtitle.</p>
+</div>
+```
+
+Images use `object-fit: contain` by default, so vertical photos remain fully visible. Add `cover` to crop photos so they fill their frame:
+
+```html
+<div class="visual two-up cover">
+    <img src="./public/images/photo-left.jpg" alt="Left photo" />
+    <img src="./public/images/photo-right.jpg" alt="Right photo" />
+</div>
+```
 
 You can still use absolute impress.js coordinates when needed:
 
 ```html
 <div class="step slide" data-x="0" data-y="1200" data-scale="1">
-    <h2>A manual position</h2>
+    <p>A manual position.</p>
 </div>
 ```
 
