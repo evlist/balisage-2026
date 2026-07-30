@@ -124,7 +124,7 @@ function runAction(action) {
   } else if (action === "next") {
     impressApi.next();
   } else if (action === "first") {
-    impressApi.goto("slide-01");
+    impressApi.goto(document.querySelector("#impress .step"));
   } else if (action === "refresh") {
     refreshApp();
   } else if (action === "close") {
