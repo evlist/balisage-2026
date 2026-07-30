@@ -82,7 +82,6 @@ function createActionMenu() {
       <button type="button" data-action="previous">Previous</button>
       <button type="button" data-action="next">Next</button>
       <button type="button" data-action="first">First slide</button>
-      <button type="button" data-action="overview">Overview</button>
       <button type="button" data-action="refresh">Refresh app</button>
       <button type="button" data-action="close">Close</button>
       <p class="action-menu__message" aria-live="polite"></p>
@@ -126,8 +125,6 @@ function runAction(action) {
     impressApi.next();
   } else if (action === "first") {
     impressApi.goto("slide-01");
-  } else if (action === "overview") {
-    impressApi.goto("overview");
   } else if (action === "refresh") {
     refreshApp();
   } else if (action === "close") {
