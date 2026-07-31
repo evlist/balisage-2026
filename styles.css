@@ -131,6 +131,15 @@ a:focus-visible {
   display: block;
 }
 
+.visual:not(.scattered-icons) img,
+.slide > img {
+  width: auto;
+  height: auto;
+  border: 2px solid rgba(255, 255, 255, 0.82);
+  border-radius: 8px;
+  box-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.28);
+}
+
 .visual.cover img,
 .slide > img.cover {
   height: 100%;
