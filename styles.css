@@ -140,6 +140,21 @@ a:focus-visible {
   box-shadow: 0 0.7rem 1.4rem rgba(0, 0, 0, 0.28);
 }
 
+.visual img.vintage-photo {
+  padding: 0.72rem 0.72rem 1.95rem;
+  border: 1px solid rgba(92, 74, 44, 0.38);
+  border-radius: 3px;
+  background:
+    linear-gradient(180deg, rgba(255, 251, 233, 0.96), rgba(228, 214, 181, 0.94)),
+    #eee1bd;
+  box-shadow:
+    0 0.95rem 1.65rem rgba(0, 0, 0, 0.36),
+    0 0.12rem 0.18rem rgba(0, 0, 0, 0.24),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
+  filter: sepia(0.34) contrast(0.92) brightness(1.04);
+  transform: rotate(var(--tilt));
+}
+
 .visual.cover img,
 .slide > img.cover {
   height: 100%;
