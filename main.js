@@ -25,11 +25,24 @@ document.addEventListener("visibilitychange", () => {
   }
 });
 
+window.addEventListener("contextmenu", (event) => {
+  if (!isInteractiveTarget(event.target)) {
+    event.preventDefault();
+  }
+});
+
+window.addEventListener("selectstart", (event) => {
+  if (!isInteractiveTarget(event.target)) {
+    event.preventDefault();
+  }
+});
+
 window.addEventListener("pointerdown", (event) => {
   if (isInteractiveTarget(event.target)) {
     return;
   }
 
+  event.preventDefault();
   requestWakeLock();
 
   startX = event.clientX;
