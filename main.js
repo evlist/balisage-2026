@@ -10,17 +10,27 @@ let longPressTimer;
 let actionMenu;
 let actionMessageTimer;
 let longPressOpenedMenu = false;
+let wakeLock;
 
 window.addEventListener("DOMContentLoaded", () => {
   impressApi = impress();
   impressApi.init();
   createActionMenu();
+  requestWakeLock();
+});
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible") {
+    requestWakeLock();
+  }
 });
 
 window.addEventListener("pointerdown", (event) => {
   if (isInteractiveTarget(event.target)) {
     return;
   }
+
+  requestWakeLock();
 
   startX = event.clientX;
   startY = event.clientY;
@@ -178,6 +188,21 @@ async function refreshApp() {
 
 function isInteractiveTarget(target) {
   return target.closest("a, button, input, textarea, select, .action-menu");
+}
+
+async function requestWakeLock() {
+  if (wakeLock || !("wakeLock" in navigator) || document.visibilityState !== "visible") {
+    return;
+  }
+
+  try {
+    wakeLock = await navigator.wakeLock.request("screen");
+    wakeLock.addEventListener("release", () => {
+      wakeLock = undefined;
+    });
+  } catch {
+    wakeLock = undefined;
+  }
 }
 
 if ("serviceWorker" in navigator) {
