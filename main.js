@@ -46,6 +46,7 @@ window.addEventListener("pointerdown", (event) => {
 
   event.preventDefault();
   requestWakeLock();
+  requestPresentationFullscreen();
 
   startX = event.clientX;
   startY = event.clientY;
@@ -220,7 +221,10 @@ function runAction(action) {
   }
 }
 
-function closeApp() {
+async function closeApp() {
+  await releaseWakeLock();
+  const exitedFullscreen = await exitPresentationFullscreen();
+
   window.close();
 
   window.setTimeout(() => {
@@ -229,7 +233,12 @@ function closeApp() {
       return;
     }
 
-    showActionMessage("Close the app from Android's recent apps screen.");
+    if (exitedFullscreen) {
+      showActionMessage("Android controls should be visible now. Use Back or recent apps to close.");
+      return;
+    }
+
+    showActionMessage("Use Android Back or recent apps to close the presentation.");
   }, 250);
 }
 
@@ -286,6 +295,46 @@ async function requestWakeLock() {
     });
   } catch {
     wakeLock = undefined;
+  }
+}
+
+async function releaseWakeLock() {
+  if (!wakeLock) {
+    return;
+  }
+
+  const lock = wakeLock;
+  wakeLock = undefined;
+
+  try {
+    await lock.release();
+  } catch {
+    wakeLock = undefined;
+  }
+}
+
+async function requestPresentationFullscreen() {
+  if (document.fullscreenElement || !document.documentElement.requestFullscreen) {
+    return;
+  }
+
+  try {
+    await document.documentElement.requestFullscreen({ navigationUI: "hide" });
+  } catch {
+    // Fullscreen requires a user gesture and may be unavailable in some mobile browsers.
+  }
+}
+
+async function exitPresentationFullscreen() {
+  if (!document.fullscreenElement || !document.exitFullscreen) {
+    return false;
+  }
+
+  try {
+    await document.exitFullscreen();
+    return true;
+  } catch {
+    return false;
   }
 }
 
