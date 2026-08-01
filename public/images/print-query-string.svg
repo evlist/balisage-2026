@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
+  <title id="title">Print query string</title>
+  <desc id="desc">A browser address bar with the print query string highlighted.</desc>
+  <g transform="translate(80 140)">
+    <rect width="740" height="140" rx="26" fill="#fff" stroke="#28312d" stroke-width="10" />
+    <circle cx="48" cy="48" r="11" fill="#d96b5d" />
+    <circle cx="84" cy="48" r="11" fill="#d2b35f" />
+    <circle cx="120" cy="48" r="11" fill="#5aa676" />
+    <rect x="42" y="78" width="656" height="42" rx="14" fill="#edf3f0" stroke="#b9c4bf" stroke-width="4" />
+    <text x="70" y="108" fill="#28312d" font-family="Georgia, serif" font-size="30">https://example.blog/day-42</text>
+    <rect x="495" y="81" width="108" height="36" rx="10" fill="#ffd9d9" stroke="#c41818" stroke-width="4" />
+    <text x="510" y="108" fill="#c41818" font-family="Georgia, serif" font-size="30" font-weight="700">?print</text>
+  </g>
+</svg>
