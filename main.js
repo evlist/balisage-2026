@@ -2,7 +2,7 @@ import "impress.js/js/impress.js";
 
 const edgeTapRatio = 0.1;
 const swipeThreshold = 50;
-const longPressDelay = 700;
+const longPressDelay = 2000;
 let startX = 0;
 let startY = 0;
 let impressApi;
