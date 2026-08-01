@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
+  <title id="title">AI targets different audiences</title>
+  <desc id="desc">The same source can be adapted for friends, relatives and the public.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#f3f6f5" />
+    </marker>
+  </defs>
+
+  <g font-family="Georgia, serif" text-anchor="middle" fill="#28312d">
+    <circle cx="215" cy="210" r="86" fill="#fff" stroke="#28312d" stroke-width="8" />
+    <text x="215" y="202" font-size="30" font-weight="700">same</text>
+    <text x="215" y="240" font-size="30" font-weight="700">story</text>
+
+    <rect x="440" y="64" width="290" height="86" rx="16" fill="#fff" stroke="#1f6f5e" stroke-width="7" />
+    <text x="585" y="116" font-size="34" font-weight="700">friends</text>
+
+    <rect x="440" y="168" width="290" height="86" rx="16" fill="#fff" stroke="#b94d3f" stroke-width="7" />
+    <text x="585" y="220" font-size="34" font-weight="700">relatives</text>
+
+    <rect x="440" y="272" width="290" height="86" rx="16" fill="#fff" stroke="#87928d" stroke-width="7" />
+    <text x="585" y="324" font-size="34" font-weight="700">public</text>
+
+    <g transform="translate(790 108)" fill="#fff" stroke="#28312d" stroke-width="6">
+      <circle cx="0" cy="0" r="16" />
+      <rect x="-14" y="18" width="28" height="34" rx="12" />
+    </g>
+    <g transform="translate(790 212)" fill="#fff" stroke="#28312d" stroke-width="6">
+      <circle cx="0" cy="0" r="16" />
+      <rect x="-14" y="18" width="28" height="34" rx="12" />
+    </g>
+    <g transform="translate(770 304)" fill="#fff" stroke="#28312d" stroke-width="6">
+      <circle cx="0" cy="0" r="14" />
+      <rect x="-12" y="16" width="24" height="30" rx="11" />
+    </g>
+    <g transform="translate(810 304)" fill="#fff" stroke="#28312d" stroke-width="6">
+      <circle cx="0" cy="0" r="14" />
+      <rect x="-12" y="16" width="24" height="30" rx="11" />
+    </g>
+  </g>
+
+  <g fill="none" stroke="#f3f6f5" stroke-width="8" stroke-linecap="round" marker-end="url(#arrow)">
+    <path d="M303 176C357 148 387 128 431 110" />
+    <path d="M303 210H431" />
+    <path d="M303 244C357 272 387 292 431 312" />
+  </g>
+</svg>
