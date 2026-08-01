@@ -9,8 +9,7 @@
 
   <g font-family="Georgia, serif" text-anchor="middle" fill="#28312d">
     <circle cx="215" cy="210" r="86" fill="#fff" stroke="#28312d" stroke-width="8" />
-    <text x="215" y="202" font-size="30" font-weight="700">same</text>
-    <text x="215" y="240" font-size="30" font-weight="700">story</text>
+    <text x="215" y="220" font-size="30" font-weight="700">story</text>
 
     <rect x="440" y="64" width="290" height="86" rx="16" fill="#fff" stroke="#1f6f5e" stroke-width="7" />
     <text x="585" y="116" font-size="34" font-weight="700">friends</text>
