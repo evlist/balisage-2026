@@ -2,15 +2,13 @@
   <title id="title">Print template selection</title>
   <desc id="desc">A print query string selects a print template, otherwise the normal template is used.</desc>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0 0 10 5 0 10z" fill="#28312d" />
+    <filter id="arrow-glow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.2" flood-color="#ffffff" flood-opacity="0.42" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#f3f6f5" />
     </marker>
   </defs>
-  <g fill="none" stroke="#28312d" stroke-width="9" stroke-linecap="round" marker-end="url(#arrow)">
-    <path d="M282 210H396" />
-    <path d="M505 154H618" />
-    <path d="M505 266H618" />
-  </g>
   <g font-family="Georgia, serif" fill="#28312d" text-anchor="middle">
     <rect x="82" y="138" width="200" height="144" rx="18" fill="#fff" stroke="#28312d" stroke-width="8" />
     <text x="182" y="222" font-size="42" font-weight="700">?print</text>
@@ -26,5 +24,10 @@
     <rect x="618" y="246" width="220" height="120" rx="16" fill="#fff" stroke="#87928d" stroke-width="8" />
     <text x="728" y="296" font-size="30" font-weight="700">no</text>
     <text x="728" y="336" font-size="30">normal</text>
+  </g>
+  <g fill="none" stroke="#f3f6f5" stroke-width="7" stroke-linecap="round" marker-end="url(#arrow)" filter="url(#arrow-glow)">
+    <path d="M282 210H360" />
+    <path d="M505 154H612" />
+    <path d="M505 266H612" />
   </g>
 </svg>
