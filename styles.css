@@ -151,8 +151,11 @@ a:focus-visible {
 }
 
 .visual img.vintage-photo {
+  box-sizing: border-box;
+  max-width: 88%;
+  max-height: 88%;
   padding: 0.72rem 0.72rem 1.95rem;
-  border: 1px solid rgba(92, 74, 44, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.86);
   border-radius: 3px;
   background:
     linear-gradient(180deg, rgba(255, 251, 233, 0.96), rgba(228, 214, 181, 0.94)),
@@ -160,8 +163,8 @@ a:focus-visible {
   box-shadow:
     0 0.95rem 1.65rem rgba(0, 0, 0, 0.36),
     0 0.12rem 0.18rem rgba(0, 0, 0, 0.24),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.45);
-  filter: sepia(0.34) contrast(0.92) brightness(1.04);
+    inset 0 0 0 1px rgba(255, 255, 255, 0.62);
+  filter: grayscale(1) sepia(0.34) contrast(0.92) brightness(1.04);
   transform: rotate(var(--tilt));
 }
 
