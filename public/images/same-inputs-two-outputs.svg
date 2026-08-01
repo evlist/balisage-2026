@@ -5,11 +5,14 @@
     <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
       <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000" flood-opacity="0.2" />
     </filter>
+    <filter id="arrow-glow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.2" flood-color="#ffffff" flood-opacity="0.42" />
+    </filter>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-      <path d="M0 0 10 5 0 10z" fill="#28312d" />
+      <path d="M0 0 10 5 0 10z" fill="#f3f6f5" />
     </marker>
   </defs>
-  <g fill="none" stroke="#28312d" stroke-width="9" stroke-linecap="round" marker-end="url(#arrow)">
+  <g fill="none" stroke="#f3f6f5" stroke-width="10" stroke-linecap="round" marker-end="url(#arrow)" filter="url(#arrow-glow)">
     <path d="M322 182C400 150 475 143 548 161" />
     <path d="M322 238C400 270 475 277 548 259" />
   </g>
