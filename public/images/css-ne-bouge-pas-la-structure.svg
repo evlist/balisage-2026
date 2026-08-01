@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 30 800 500" font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+
+  <!-- ===================== ARBRE (DOM) ===================== -->
+
+  <!-- tronc -->
+  <path d="M380 470 C378 380, 382 300, 400 230" stroke="#4A3728" stroke-width="16" stroke-linecap="round" fill="none"/>
+
+  <!-- branche gauche (fixe, immobile) -->
+  <path d="M395 330 C330 300, 270 260, 220 210" stroke="#4A3728" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <circle cx="205" cy="196" r="42" fill="#7A9B6E"/>
+  <circle cx="175" cy="215" r="26" fill="#7A9B6E"/>
+  <circle cx="230" cy="160" r="28" fill="#7A9B6E"/>
+
+  <!-- branche haute centrale (fixe) -->
+  <path d="M400 250 C405 200, 400 150, 385 100" stroke="#4A3728" stroke-width="9" stroke-linecap="round" fill="none"/>
+  <circle cx="380" cy="85" r="38" fill="#7A9B6E"/>
+  <circle cx="350" cy="105" r="24" fill="#7A9B6E"/>
+  <circle cx="410" cy="70" r="26" fill="#7A9B6E"/>
+
+  <!-- branche cible : pliée par CSS, mais son point d'attache au tronc ne bouge pas -->
+  <path d="M400 300 C 460 305, 520 330, 560 380 C 585 410, 590 430, 578 445"
+        stroke="#4A3728" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <circle cx="590" cy="452" r="34" fill="#93B085"/>
+  <circle cx="615" cy="470" r="22" fill="#93B085"/>
+  <circle cx="565" cy="465" r="20" fill="#93B085"/>
+
+  <!-- trajectoire fantôme : là où CSS voudrait amener la branche -->
+  <path d="M400 300 C 470 340, 520 400, 480 470" stroke="#B7ADA0" stroke-width="3" stroke-dasharray="6 8" fill="none"/>
+  <path d="M480 470 l -10 -14 m 10 14 l 16 -6" stroke="#B7ADA0" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- ===================== BONHOMME "CSS" ===================== -->
+  <g>
+    <!-- corde vers la branche -->
+    <line x1="560" y1="380" x2="500" y2="415" stroke="#4A3728" stroke-width="4"/>
+
+    <!-- jambes pliées, en appui -->
+    <path d="M470 500 L 445 470 M 470 500 L 500 475" stroke="#2F4D8C" stroke-width="10" stroke-linecap="round" fill="none"/>
+
+    <!-- corps -->
+    <rect x="450" y="425" width="55" height="60" rx="16" fill="#3A5FC4"/>
+    <text x="477" y="462" font-size="17" font-weight="700" fill="#F5F1E6" text-anchor="middle">CSS</text>
+
+    <!-- bras tendus vers la corde, penché en arrière (effort) -->
+    <path d="M452 435 L 500 415" stroke="#3A5FC4" stroke-width="10" stroke-linecap="round" fill="none"/>
+    <path d="M503 440 L 500 415" stroke="#3A5FC4" stroke-width="10" stroke-linecap="round" fill="none"/>
+
+    <!-- tête -->
+    <circle cx="477" cy="405" r="20" fill="#3A5FC4"/>
+    <!-- petit visage crispé par l'effort -->
+    <circle cx="470" cy="402" r="2.4" fill="#F5F1E6"/>
+    <circle cx="484" cy="402" r="2.4" fill="#F5F1E6"/>
+    <path d="M470 412 Q477 408 484 412" stroke="#F5F1E6" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- lignes d'effort -->
+    <path d="M425 400 l -14 -6" stroke="#B7ADA0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M430 415 l -16 2" stroke="#B7ADA0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M520 505 l 8 -16" stroke="#B7ADA0" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+</svg>
