@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-labelledby="title desc">
+  <title id="title">No link between both sides</title>
+  <desc id="desc">A white bidirectional arrow crossed out with a red diagonal line.</desc>
+  <g fill="none" stroke="#f3f6f5" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 60h160" />
+    <path d="M40 60 78 32" />
+    <path d="M40 60 78 88" />
+    <path d="M200 60 162 32" />
+    <path d="M200 60 162 88" />
+  </g>
+  <path d="M32 96 208 24" stroke="#c61f1f" stroke-width="16" stroke-linecap="round" />
+</svg>
