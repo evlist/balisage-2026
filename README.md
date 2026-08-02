@@ -1,6 +1,61 @@
 # balisage-2026
 My presentation for Balisage 2026 (Open Mic session, 10 minutes slot)
 
+## User manual
+
+This presentation is optimized for touch and mobile use (including Android fullscreen behavior).
+
+### Navigate slides
+
+- Swipe left: next slide
+- Swipe right: previous slide
+- Tap on the left edge (10% of screen width): previous slide
+- Tap on the right edge (10% of screen width): next slide
+
+### Long press actions
+
+Press and hold for about 2 seconds anywhere on the slide to open the action menu.
+
+The menu provides:
+
+- Previous
+- Next
+- First slide
+- Summary (table of contents)
+- Refresh app (clear caches/service worker and reload)
+- Close
+
+### Keyboard and fullscreen
+
+- `Esc` closes the action/summary menus
+- Fullscreen is requested automatically on first pointer interaction
+
+### Install as an app (PWA)
+
+This presentation is installable as an application.
+
+- On Android (Chrome/Edge): open the browser menu, then choose `Install app` or `Add to Home screen`
+- On desktop (Chrome/Edge): use the install icon in the address bar
+- Once installed, launch it from the home screen/app launcher for a cleaner fullscreen experience
+
+### Notes
+
+- Text selection and context menu are disabled on slide areas to avoid accidental interactions during presentation.
+- Links and buttons remain interactive.
+
+## Context
+Proposal:
+
+> Last year, during our trek to Spain and Portugal, I have generated a print version of my blog. This blog is powered by WordPress and, except CSS, it doesn't use any of the technologies usually discussed at Balisage. The process can probably be considered a terrible hack, it relies on PHP which is one of the most hated (and used) programming languages, but still it kind of fulfills the promise of repurposing content from web to print.
+>  
+> The tagline could be "Techniques come and go, but ideas last." 😉 ...
+
+Answer (Debbie Lapeyre):
+
+> Actually, I think this would be a dynamite Open Mic, especially if you focussed on the how not the what.https://balisage.net/index.html
+
+
+
 ## Setup for writing slides (phase 1)
 
 Dependencies are managed with npm and the presentation uses:
@@ -40,6 +95,8 @@ Minimal slide example:
 
 For simple top-to-bottom navigation, set `data-delta-y="600"` once. The build/dev server keeps adding that delta to the previous slide position until another `data-delta-x`, `data-delta-y` or `data-delta-z` value is defined.
 
+Important: coordinates are resolved at build/serve time by the Vite plugin in `vite.config.mjs` using `scripts/resolve-impress-coordinates.mjs`; source coordinates are not rewritten in `index.html`.
+
 Slides can include an optional visual block before the subtitle sentence:
 
 ```html
@@ -50,6 +107,8 @@ Slides can include an optional visual block before the subtitle sentence:
     <p>The subtitle sentence stays at the bottom.</p>
 </div>
 ```
+
+The direct last `<p>` child of each slide is treated as the slide title/subtitle and is also used in the generated Summary menu. Keep that sentence short and explicit.
 
 Use `two-up` for two images side by side:
 
@@ -72,6 +131,18 @@ Images use `object-fit: contain` by default, so vertical photos remain fully vis
 </div>
 ```
 
+Use `three-up` when you need two visuals plus a central connector icon:
+
+```html
+<div class="visual three-up">
+    <img src="./public/images/source.png" alt="Source" />
+    <img src="./public/images/arrow-right-white.svg" alt="" aria-hidden="true" class="no-frame" />
+    <img src="./public/images/target.png" alt="Target" />
+</div>
+```
+
+Use `class="no-frame"` on helper icons (arrows/separators) so they are displayed without borders.
+
 You can still use absolute impress.js coordinates when needed:
 
 ```html
@@ -80,7 +151,7 @@ You can still use absolute impress.js coordinates when needed:
 </div>
 ```
 
-The coordinate resolver runs automatically during `npm run dev` and `npm run build`; it does not rewrite `index.html`.
+Interaction model is implemented in `main.js` (swipes, edge taps, long-press action menu, summary, fullscreen and wake-lock).
 
 ## Useful commands
 
@@ -115,73 +186,19 @@ The published URL should be:
 https://evlist.github.io/balisage-2026/
 ```
 
-## Context
-Proposal:
+## License
 
-> Last year, during our trek to Spain and Portugal, I have generated a print version of my blog. This blog is powered by WordPress and, except CSS, it doesn't use any of the technologies usually discussed at Balisage. The process can probably be considered a terrible hack, it relies on PHP which is one of the most hated (and used) programming languages, but still it kind of fulfills the promise of repurposing content from web to print.
->  
-> The tagline could be "Techniques come and go, but ideas last." 😉 ...
+This repository uses a split-license model:
 
-Answer (Debbie Lapeyre):
+- Code and technical files are licensed under GNU GPL v3.0 (see `LICENSE`).
+- Presentation content (slide text and original diagrams/illustrations created for this deck) is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (see `LICENSE-CONTENT` and <https://creativecommons.org/licenses/by-nc-sa/4.0/>).
 
-> Actually, I think this would be a dynamite Open Mic, especially if you focussed on the how not the what.https://balisage.net/index.html
+Third-party assets are excluded from the two licenses above and remain under their original terms.
+See `ASSETS_LICENSES.md` for provenance and source information.
 
-## Technical details
+Practical scope in this repository:
 
-* Use impress.js
-* Start by focussing on the content
-* Use AI (copilot) to deal with impress.js complexity and english syntax
-
-## Simplified outline
-
-* Why
-    * Keeping in touch with friends and relatives during our long distance hikes
-    * Target audience includes my 88 year old mother who does not have Internet access
-* History
-    * 2023
-        * Attempt to cross North Spain on the GR1 (aborted after 3 wweks by knee arthrosis)
-        * Cycle journey around France, Belgium, Netherland and Germany (3 months, 5000 km)
-        * Print only
-            * Online photobook supplier (Cewe)
-            * Every month or so
-            * Creation of a book for the period 
-            * Shipped by Cewe to my mother
-            * Shown or given to friends and relative after we returned
-        * Pros:
-            * Minimal workload
-            * Nice real world souvenir to read afterwards
-        * Cons:
-            * Monthly issues
-            * Needing other medias to provide timely updates (mail, whatsapp, ...)
-    * 2024
-        * Cycle journey across Europe (8 months, 10000 km, 15 countries)
-        * Web only
-            * Wordpress blog (https:e.vli.st)
-            * Using existing plugins and theme
-            * Daily entries
-        * Pros:
-            * Easy to follow by friends and relative
-            * Includes maps and more pictures
-        * Cons:
-            * Workflow complexified by using many different plugins
-            * Workload
-            * Not accessible offline
-    * 2025
-        * Hike between Montpellier (South France) and Nazare (Center Portugal) on Santiago's paths (6 monts, 3200km)
-        * Web and print
-            * Wordpress blog (https:e.vli.st)
-            * Plugin and theme custom developments
-                * To streamline the workflow
-                * To display 2 page falvours (web or print)
-             * Print pages are exported to PDF using Samsung's web browser and manually assembled to create books.  
-        * Pros:
-            * Web and print
-            * Fits both online and offline friends and relatives
-        * Cons:
-            * Workload
-         * Extras:
-            * Video
-    * Future directions
-       * Group  
-            * (Slightly) more work
+- Typically GPLv3: `main.js`, `styles.css`, `scripts/`, `vite.config.mjs`, build/workflow/config files.
+- Typically CC BY-NC-SA: narrative and explanatory content in `index.html`, plus original slide illustrations.
+- Third-party: logos, photos, icons, and any externally sourced media listed in `ASSETS_LICENSES.md`.
 
