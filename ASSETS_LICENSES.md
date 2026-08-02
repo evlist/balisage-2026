@@ -36,6 +36,7 @@ Goal: list assets by origin, without a full legal audit.
 - public/images/Balisage-logotype-2026.png (downloaded from the conference website)
 - public/images/Claude_AI_logo.svg.webp (downloaded from Wikipedia)
 - public/images/Google_Gemini_logo_2025.svg.webp (downloaded from the Gemini website)
+- public/images/gplv3-127x51.png (downloaded from GNU.org)
 
 ## Generated locally with AI (GitHub Copilot)
 
@@ -45,6 +46,7 @@ Goal: list assets by origin, without a full legal audit.
 - public/images/ai-target-formats.svg
 - public/images/arrow-right-white.svg
 - public/images/calendar-2026.svg
+- public/images/license-cc-by-nc-sa.svg
 - public/images/mother-offline.svg
 - public/images/no-link-bidirectional-arrow.svg
 - public/images/print-query-string.svg

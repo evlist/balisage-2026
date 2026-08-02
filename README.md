@@ -83,7 +83,7 @@ In Codespaces:
 
 ## Editing model
 
-One impress.js slide = one `<div class="step slide">` block in `index.html`.
+One impress.js slide = one `<div class="step slide">` block in [index.html](index.html).
 
 Minimal slide example:
 
@@ -95,7 +95,7 @@ Minimal slide example:
 
 For simple top-to-bottom navigation, set `data-delta-y="600"` once. The build/dev server keeps adding that delta to the previous slide position until another `data-delta-x`, `data-delta-y` or `data-delta-z` value is defined.
 
-Important: coordinates are resolved at build/serve time by the Vite plugin in `vite.config.mjs` using `scripts/resolve-impress-coordinates.mjs`; source coordinates are not rewritten in `index.html`.
+Important: coordinates are resolved at build/serve time by the Vite plugin in [vite.config.mjs](vite.config.mjs) using [scripts/resolve-impress-coordinates.mjs](scripts/resolve-impress-coordinates.mjs); source coordinates are not rewritten in [index.html](index.html).
 
 Slides can include an optional visual block before the subtitle sentence:
 
@@ -151,7 +151,7 @@ You can still use absolute impress.js coordinates when needed:
 </div>
 ```
 
-Interaction model is implemented in `main.js` (swipes, edge taps, long-press action menu, summary, fullscreen and wake-lock).
+Interaction model is implemented in [main.js](main.js) (swipes, edge taps, long-press action menu, summary, fullscreen and wake-lock).
 
 ## Useful commands
 
@@ -165,14 +165,14 @@ npm run preview  # preview production build
 
 This repository publishes the built presentation automatically with GitHub Actions.
 
-On every push to `main`, the workflow in `.github/workflows/pages.yml` runs:
+On every push to `main`, the workflow in [.github/workflows/pages.yml](.github/workflows/pages.yml) runs:
 
 ```bash
 npm ci
 npm run build
 ```
 
-It then deploys the generated `dist/` directory to GitHub Pages.
+It then deploys the generated [dist/](dist/) directory to GitHub Pages.
 
 Repository settings required once:
 
@@ -190,15 +190,15 @@ https://evlist.github.io/balisage-2026/
 
 This repository uses a split-license model:
 
-- Code and technical files are licensed under GNU GPL v3.0 (see `LICENSE`).
-- Presentation content (slide text and original diagrams/illustrations created for this deck) is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (see `LICENSE-CONTENT` and <https://creativecommons.org/licenses/by-nc-sa/4.0/>).
+- Code and technical files are licensed under GNU GPL v3.0 (see [LICENSE](LICENSE)).
+- Presentation content (slide text and original diagrams/illustrations created for this deck) is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (see [LICENSE-CONTENT](LICENSE-CONTENT) and <https://creativecommons.org/licenses/by-nc-sa/4.0/>).
 
 Third-party assets are excluded from the two licenses above and remain under their original terms.
-See `ASSETS_LICENSES.md` for provenance and source information.
+See [ASSETS_LICENSES.md](ASSETS_LICENSES.md) for provenance and source information.
 
 Practical scope in this repository:
 
-- Typically GPLv3: `main.js`, `styles.css`, `scripts/`, `vite.config.mjs`, build/workflow/config files.
-- Typically CC BY-NC-SA: narrative and explanatory content in `index.html`, plus original slide illustrations.
-- Third-party: logos, photos, icons, and any externally sourced media listed in `ASSETS_LICENSES.md`.
+- Typically GPLv3: [main.js](main.js), [styles.css](styles.css), [scripts/](scripts/), [vite.config.mjs](vite.config.mjs), build/workflow/config files.
+- Typically CC BY-NC-SA: narrative and explanatory content in [index.html](index.html), plus original slide illustrations.
+- Third-party: logos, photos, icons, and any externally sourced media listed in [ASSETS_LICENSES.md](ASSETS_LICENSES.md).
 

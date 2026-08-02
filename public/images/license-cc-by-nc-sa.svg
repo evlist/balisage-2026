@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="120" viewBox="0 0 560 120" role="img" aria-labelledby="title desc">
+  <title id="title">CC BY-NC-SA 4.0</title>
+  <desc id="desc">Creative Commons Attribution NonCommercial ShareAlike 4.0 badge</desc>
+  <rect x="2" y="2" width="556" height="116" rx="14" fill="#0f1f2a" stroke="#f5eed8" stroke-width="3"/>
+  <rect x="18" y="18" width="94" height="84" rx="10" fill="#ffffff"/>
+  <circle cx="48" cy="60" r="22" fill="none" stroke="#0f1f2a" stroke-width="6"/>
+  <text x="48" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f1f2a" font-weight="700">CC</text>
+  <circle cx="82" cy="60" r="22" fill="none" stroke="#0f1f2a" stroke-width="6"/>
+  <text x="82" y="67" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#0f1f2a" font-weight="700">BY</text>
+  <text x="136" y="54" font-family="Arial, sans-serif" font-size="31" fill="#f5eed8" font-weight="700">CC BY-NC-SA</text>
+  <text x="136" y="88" font-family="Arial, sans-serif" font-size="24" fill="#f5eed8">4.0 International</text>
+</svg>
