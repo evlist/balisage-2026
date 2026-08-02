@@ -126,29 +126,24 @@ a:focus-visible {
   gap: 1rem;
 }
 
-.visual.html-output-flow {
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  gap: 2.3rem;
+.visual.three-up {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.62fr) minmax(0, 1fr);
+  gap: 1.2rem;
   align-items: center;
-  padding-inline: 1.2rem;
+  padding-inline: 0.9rem;
 }
 
-.visual.html-output-flow img {
-  max-width: 86%;
+.visual.three-up img {
+  max-width: 88%;
   justify-self: center;
 }
 
-.visual.html-output-flow .flow-arrow {
-  display: inline-block;
-  align-self: center;
-  justify-self: center;
-  font-family: "Cambria Math", "Segoe UI Symbol", "Arial Black", sans-serif;
-  font-size: 6.8rem;
-  line-height: 1;
-  font-weight: 900;
-  color: #fff7d1;
-  transform: translateY(-0.16rem);
-  text-shadow: none;
+.visual.three-up img.no-frame {
+  max-width: 100%;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
 }
 
 .visual > * {

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 120" role="img" aria-labelledby="title desc">
+  <title id="title">Right arrow</title>
+  <desc id="desc">Simple white arrow on transparent background.</desc>
+  <g fill="none" stroke="#f3f6f5" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20 60h150" />
+    <path d="M120 25 170 60 120 95" />
+  </g>
+</svg>
