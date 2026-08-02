@@ -10,7 +10,7 @@
     <g transform="translate(198 210) rotate(-5)" filter="url(#shadow)">
       <path d="M-96-118H48l48 48v188H-96z" fill="#fff" stroke="#28312d" stroke-width="8" stroke-linejoin="round" />
       <path d="M48-118v48h48" fill="none" stroke="#b9c4bf" stroke-width="7" stroke-linejoin="round" />
-      <text y="-15" font-size="56" font-weight="700">.srt</text>
+      <text y="-15" font-size="56" font-weight="700">.vtt</text>
       <text y="48" font-size="30">subtitles</text>
     </g>
     <g transform="translate(450 210) rotate(3)" filter="url(#shadow)">
